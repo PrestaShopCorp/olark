@@ -1,0 +1,47 @@
+.olark-wrap { clear: both; margin: 0px auto; max-width: 1024px; min-width: 930px; }
+
+p.olark-intro { clear: both; color: #333; font-size: 24px; line-height: 30px; letter-spacing: 1px; margin: 0px 0px 25px 0px; overflow: hidden; padding: 28px 120px 0px 20px; text-align: center; }
+p.olark-intro span { font-size: 30px; }
+a.olark-logo { display: inline-block; float: left; margin: -28px 120px 0px 0px; }
+p.olark-intro a.olark-link { margin-top: 25px; }
+
+.olark-content { 
+	-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.3); -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.3); box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	clear: both; margin: 0px 0px 15px 0px; padding: 20px; overflow: hidden;
+}
+.olark-content h3 { color: #333; font-size: 24px; font-weight: normal; line-height: 28px; margin: 0px 0px 25px 0px; }
+.olark-content p { color: #333; font-size: 18px; line-height: 18px; margin: 0px 0px 15px 0px; }
+.olark-content p a.olark-link { margin-left: 30px; }
+
+.olark-content ul { list-style: none; margin: 0px 0px 35px 0px; overflow: hidden; padding: 0px; }
+.olark-content ul li { background: url(../img/bullet.gif) left 6px no-repeat; color: #434E59; float: left; font-size: 15px; line-height: 18px; margin: 0px 0px 0px 0px; padding: 8px 0px 8px 10px; width: 47%; }
+.olark-content ul li.alt { border-left: solid 1px #D8D8D8; }
+.olark-content ul li img { margin: 0px 6px 0px 0px; vertical-align: top; }
+
+a.olark-link {
+	background: url(../img/button-green-border.png) no-repeat top left;
+	border: none;
+	color: white !important;
+	display: inline-block;    
+    height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0;
+    padding: 13px 0 0px 0;
+    text-align: center;    
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #225109;
+	width: 198px;
+}
+a.olark-link:hover {
+	color: white !important;
+	background-position: top -198px;
+}
+
+.olark-video { float: right; margin: 0px 0px 0px 30px; width: 350px; overflow: hidden; }
+.olark-content .olark-video p { font-size: 14px; font-weight: bold; letter-spacing: 1px; margin: 10px 0px 0px 0px; text-align: center; text-transform: uppercase; }
+a.olark-video-btn { display: block; height: 195px; position: relative; width: 360px; }
+img.video-icon { position: absolute; left: 149px; top: 64px; }
+
+fieldset h4 { margin-top: 0px; }
