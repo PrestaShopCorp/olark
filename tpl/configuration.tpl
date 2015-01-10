@@ -26,7 +26,7 @@
 	<div class="olark-content">
 		<h3>{l s='Get to know your shoppers, create relationships with customers and increase sales.' mod='olark'}</h3>
 		<div class="olark-video">
-			<a href="https://fast.wistia.com/embed/iframe/79c2daad08?" class="olark-video-btn"><img src="{$module_dir}img/olark-video-screen.jpg" alt="Olark Video" /><img src="{$module_dir}img/btn-video.png" alt="" class="video-icon" /></a>
+			<a href="https://fast.wistia.com/embed/iframe/79c2daad08?" class="olark-video-btn"><img src="{$module_dir}img/olark-video-screen.png" alt="Olark Video" /><img src="{$module_dir}img/btn-video.png" alt="" class="video-icon" /></a>
 			<p>{l s='Watch how Olark works...'}</p>
 		</div>
 		<ul>

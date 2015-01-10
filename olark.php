@@ -86,7 +86,7 @@ class Olark extends Module
 		{
 			foreach ($this->_configurationKeys as $keys)
 				Configuration::updateValue($keys['key'], pSQL($_POST[$keys['post']]));
-			$html .= '<div class="conf">'.$this->l('Updated succesfully').'</div>';
+			$html .= $this->displayConfirmation($this->l('Settings updated'));
 		}
 
 		$smarty_variables = array();
