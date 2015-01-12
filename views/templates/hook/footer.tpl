@@ -1,3 +1,8 @@
+{*
+*  @author  Olark <support@olark.com>
+*  @copyright  Olark 2014
+*  @version  Release: $Revision: 1.2 $
+*}
 <!-- Begin Olark -->
 <script data-cfasync="false" type='text/javascript'>/*{literal}<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){

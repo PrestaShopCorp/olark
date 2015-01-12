@@ -1,3 +1,8 @@
+{*
+*  @author  Olark <support@olark.com>
+*  @copyright  Olark 2014
+*  @version  Release: $Revision: 1.2 $
+*}
 <link href="{$module_dir|escape:'url'}css/olark.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 	/* Fancybox */
