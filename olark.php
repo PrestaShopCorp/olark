@@ -85,7 +85,7 @@ class Olark extends Module
 		if (Tools::isSubmit('submitOlark'))
 		{
 			foreach ($this->configuration_keys as $keys)
-				Configuration::updateValue($keys['key'], Tools::getValue($keys['post']));
+				Configuration::updateValue($keys['key'], pSQL(Tools::getValue($keys['post'])));
 			$html .= $this->displayConfirmation($this->l('Settings updated'));
 		}
 
