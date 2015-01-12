@@ -1,8 +1,12 @@
 <?php
 /**
-*  @author  Olark <support@olark.com>
-*  @copyright  Olark 2014
-*  @version  Release: $Revision: 1.2 $
+*
+* Olark Module
+*
+*    @author  Olark <support@olark.com>
+* @license
+* @copyright  Olark 2014
+* @version  Release: $Revision: 1.2 $
 */
 
 if (!defined('_PS_VERSION_'))
@@ -97,9 +101,9 @@ class Olark extends Module
 		$this->context->smarty->assign(array(
 				'logo' => '../modules/olark/img/olark_logo.png',
 				'form' => './index.php?tab=AdminModules&configure=olark&token='
-				  .Tools::getAdminTokenLite('AdminModules').'&tab_module='.$this->tab.'&module_name=olark',
+					.Tools::getAdminTokenLite('AdminModules').'&tab_module='.$this->tab.'&module_name=olark',
 				'tracking' => 'http://www.prestashop.com/modules/olark.png?url_site='
-				  .Tools::safeOutput($_SERVER['SERVER_NAME']).'&amp;id_lang='.(int)$this->context->cookie->id_lang,
+					.Tools::safeOutput($_SERVER['SERVER_NAME']).'&amp;id_lang='.(int)$this->context->cookie->id_lang,
 			));
 
 		return $html.$this->display(__FILE__, 'views/templates/front/configuration.tpl');
