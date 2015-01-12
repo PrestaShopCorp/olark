@@ -2,11 +2,10 @@
 /**
 *
 * Olark Module
-*
-*    @author  Olark <support@olark.com>
-* @license
+* @author     Olark <support@olark.com>
 * @copyright  Olark 2014
-* @version  Release: $Revision: 1.2 $
+* @license
+* @version    Release: $Revision: 1.2 $
 */
 
 if (!defined('_PS_VERSION_'))
