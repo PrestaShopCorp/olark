@@ -1,8 +1,11 @@
 <?php
-/*
-*  @author  Olark <support@olark.com>
-*  @copyright  Olark 2014
-*  @version  Release: $Revision: 1.2 $
+/**
+* Olark Module
+*
+* @author    Olark <support@olark.com>
+* @copyright Olark 2014
+* @license
+* @version   Release: $Revision: 1.2 $
 */
 
 if (!defined('_PS_VERSION_'))
@@ -10,7 +13,7 @@ if (!defined('_PS_VERSION_'))
 
 class Olark extends Module
 {
-	private $_configurationKeys;
+	private $configuration_keys;
 
 	public function __construct()
 	{
@@ -32,9 +35,9 @@ class Olark extends Module
 	}
 
 	/* Init the private variable configurationKey with the list of all the smarty, post variables needed */
-	private function _iniConfigurationKeys()
+	private function iniConfigurationKeys()
 	{
-		$this->_configurationKeys = array(
+		$this->configuration_keys = array(
 			array('smarty' => 'siteId', 'key' => 'OLARK_SITE_ID','post' => 'olarkSiteId'),
 			array('smarty' => 'welcomingTitle', 'key' => 'OLARK_WELCOME_TITLE', 'post' => 'olarkWelcomingTitle'),
 			array('smarty' => 'chattingTitle','key' => 'OLARK_CHATTING_TITLE', 'post' => 'olarkChattingTitle'),
@@ -64,10 +67,10 @@ class Olark extends Module
 
 	public function uninstall()
 	{
-		$this->_iniConfigurationKeys();
+		$this->iniConfigurationKeys();
 
 		/* Delete all configuration keys and uninstall the module */
-		foreach ($this->_configurationKeys as $keys)
+		foreach ($this->configuration_keys as $keys)
 			Configuration::deleteByName($keys['key']);
 
 		return parent::uninstall();
@@ -76,31 +79,33 @@ class Olark extends Module
 	public function getContent()
 	{
 		$html = '';
-			if (version_compare(_PS_VERSION_,'1.5','>'))
+			if (version_compare(_PS_VERSION_, '1.5', '>'))
 				$this->context->controller->addJQueryPlugin('fancybox');
 			else
 				$html .= '<script type="text/javascript" src="'.__PS_BASE_URI__.'js/jquery/jquery.fancybox-1.3.4.js"></script>
 			  	<link type="text/css" rel="stylesheet" href="'.__PS_BASE_URI__.'css/jquery.fancybox-1.3.4.css" />';
-		$this->_iniConfigurationKeys();
+		$this->iniConfigurationKeys();
 		if (Tools::isSubmit('submitOlark'))
 		{
-			foreach ($this->_configurationKeys as $keys)
-				Configuration::updateValue($keys['key'], pSQL($_POST[$keys['post']]));
-			$html .= '<div class="conf">'.$this->l('Updated succesfully').'</div>';
+			foreach ($this->configuration_keys as $keys)
+				Configuration::updateValue($keys['key'], pSQL(Tools::getValue($keys['post'])));
+			$html .= $this->displayConfirmation($this->l('Settings updated'));
 		}
 
 		$smarty_variables = array();
-		foreach ($this->_configurationKeys as $keys)
+		foreach ($this->configuration_keys as $keys)
 			$smarty_variables[$keys['smarty']] = Configuration::get($keys['key']);
 		$this->context->smarty->assign($smarty_variables);
 
 		$this->context->smarty->assign(array(
 				'logo' => '../modules/olark/img/olark_logo.png',
-				'form' => './index.php?tab=AdminModules&configure=olark&token='.Tools::getAdminTokenLite('AdminModules').'&tab_module='.$this->tab.'&module_name=olark',
-				'tracking' => 'http://www.prestashop.com/modules/olark.png?url_site='.Tools::safeOutput($_SERVER['SERVER_NAME']).'&amp;id_lang='.(int)$this->context->cookie->id_lang,
+				'form' => './index.php?tab=AdminModules&configure=olark&token='
+					.Tools::getAdminTokenLite('AdminModules').'&tab_module='.$this->tab.'&module_name=olark',
+				'tracking' => 'http://www.prestashop.com/modules/olark.png?url_site='
+					.Tools::safeOutput($_SERVER['SERVER_NAME']).'&amp;id_lang='.(int)$this->context->cookie->id_lang,
 			));
 
-		return $html.$this->display(__FILE__, 'tpl/configuration.tpl');
+		return $html.$this->display(__FILE__, 'views/templates/front/configuration.tpl');
 	}
 
 	/* The chat box will be integrated in Javascript and displayed in the footer */
@@ -118,13 +123,11 @@ class Olark extends Module
 		}
 
 		$smarty_variables = array();
-		$this->_iniConfigurationKeys();
-		foreach ($this->_configurationKeys as $keys)
-		{
-				$smarty_variables[$keys['smarty']] = Configuration::get($keys['key']);
-		}
+		$this->iniConfigurationKeys();
+		foreach ($this->configuration_keys as $keys)
+			$smarty_variables[$keys['smarty']] = Configuration::get($keys['key']);
 		$this->context->smarty->assign($smarty_variables);
 
-		return $this->display(__FILE__, 'tpl/footer.tpl');
+		return $this->display(__FILE__, 'views/templates/hook/footer.tpl');
 	}
 }
