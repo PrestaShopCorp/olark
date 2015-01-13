@@ -3,7 +3,7 @@
 *  @copyright  Olark 2014
 *  @version  Release: $Revision: 1.2 $
 *}
-<link href="{$module_dir|escape:'url'}css/olark.css" rel="stylesheet" type="text/css">
+<link href="{$module_dir|escape:'htmlall'}css/olark.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 	/* Fancybox */
 	{literal}
@@ -25,29 +25,29 @@
 </script>
 <img src="{$tracking|escape:'htmlall':'UTF-8'}" alt="tracking" style="display: none" />
 <div class="olark-wrap">
-	<p class="olark-intro"><a href="https://www.olark.com/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-logo" target="_blank"><img src="{$module_dir|escale:'url'}img/olark_logo.png" alt="Olark" border="0" /></a><span>{l s='Chat with your Customers' mod='olark'}</span><br />
+	<p class="olark-intro"><a href="https://www.olark.com/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-logo" target="_blank"><img src="{$module_dir|escape:'htmlall'}img/olark_logo.png" alt="Olark" border="0" /></a><span>{l s='Chat with your Customers' mod='olark'}</span><br />
 	{l s='Create trust, loyalty &amp; happiness' mod='olark'}<br />
 	<a href="https://www.olark.com/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-link" target="_blank">{l s='Get Started Now' mod='olark'}</a></p>
 	<div class="olark-content">
 		<h3>{l s='Get to know your shoppers, create relationships with customers and increase sales.' mod='olark'}</h3>
 		<div class="olark-video">
-			<a href="https://fast.wistia.com/embed/iframe/79c2daad08?" class="olark-video-btn"><img src="{$module_dir|escape:'url'}img/olark-video-screen.png" alt="Olark Video" /><img src="{$module_dir|escape:'url'}img/btn-video.png" alt="" class="video-icon" /></a>
+			<a href="https://fast.wistia.com/embed/iframe/79c2daad08?" class="olark-video-btn"><img src="{$module_dir|escape:'htmlall'}img/olark-video-screen.png" alt="Olark Video" /><img src="{$module_dir|escape:'htmlall'}img/btn-video.png" alt="" class="video-icon" /></a>
 			<p>{l s='Watch how Olark works...' mod='olark'}</p>
 		</div>
 		<ul>
-			<li><img src="{$module_dir|escape:'url'}img/olark-chat.png" alt="" /> {l s='Chat using your IM client' mod='olark'}</li>
-			<li class="alt"><img src="{$module_dir|escape:'url'}img/olark-heart.png" alt="" /> {l s='Satisfying User Experience' mod='olark'}</li>
-			<li><img src="{$module_dir|escape:'url'}img/olark-team.png" alt="" /> {l s='Work together as a team' mod='olark'}</li>
-			<li class="alt"><img src="{$module_dir|escape:'url'}img/olark-stats.png" alt="" /> {l s='Detailed Reporting &amp; Stats' mod='olark'}</li>
-			<li><img src="{$module_dir|escape:'url'}img/olark-crm.png" alt="" /> {l s='CRM &amp; Helpdesk Integration' mod='olark'}</li>
-			<li class="alt"><img src="{$module_dir|escape:'url'}img/olark-code.png" alt="" /> {l s='Powerful API' mod='olark'}</li>
+			<li><img src="{$module_dir|escape:'htmlall'}img/olark-chat.png" alt="" /> {l s='Chat using your IM client' mod='olark'}</li>
+			<li class="alt"><img src="{$module_dir|escape:'htmlall'}img/olark-heart.png" alt="" /> {l s='Satisfying User Experience' mod='olark'}</li>
+			<li><img src="{$module_dir|escape:'htmlall'}img/olark-team.png" alt="" /> {l s='Work together as a team' mod='olark'}</li>
+			<li class="alt"><img src="{$module_dir|escape:'htmlall'}img/olark-stats.png" alt="" /> {l s='Detailed Reporting &amp; Stats' mod='olark'}</li>
+			<li><img src="{$module_dir|escape:'htmlall'}img/olark-crm.png" alt="" /> {l s='CRM &amp; Helpdesk Integration' mod='olark'}</li>
+			<li class="alt"><img src="{$module_dir|escape:'htmlall'}img/olark-code.png" alt="" /> {l s='Powerful API' mod='olark'}</li>
 		</ul>
 		<p>{l s='Talk to your customers today!' mod='olark'} <a href="https://www.olark.com/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-link" target="_blank">{l s='Create an Account' mod='olark'}</a></p>
 	</div>
 	
 	<form action="{$form|escape:'htmlall':'UTF-8'}" method="post">
 		<fieldset>
-			<legend><img src="{$module_dir|escape:'url'}img/icon-config.gif" alt="" />{l s='Configuration' mod='olark'}</legend>
+			<legend><img src="{$module_dir|escape:'htmlall'}img/icon-config.gif" alt="" />{l s='Configuration' mod='olark'}</legend>
 			<p>{l s='Use the Site-ID provided to you by Olark to configure the module' mod='olark'}</p><br/>
 			<label for="olarkSiteId">{l s='Site Id' mod='olark'}</label>
 			<div class="margin-form">
@@ -59,7 +59,7 @@
 		</fieldset><br />
 		<br />
 		<fieldset>
-			<legend><img src="{$module_dir|escape:'url'}img/icon-config.gif" alt="" />{l s='Additional Configuration (optional)' mod='olark'}</legend>
+			<legend><img src="{$module_dir|escape:'htmlall'}img/icon-config.gif" alt="" />{l s='Additional Configuration (optional)' mod='olark'}</legend>
 			<p>{l s='Feel free to customize the default text below' mod='olark'}</p><br/>
 			<label for="olarkWelcomingTitle">{l s='Welcoming Title' mod='olark'}</label>
 			<div class="margin-form">
