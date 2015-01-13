@@ -1,11 +1,11 @@
 <?php
 /**
-*
 * Olark Module
-* @author     Olark <support@olark.com>
-* @copyright  Olark 2014
+*
+* @author    Olark <support@olark.com>
+* @copyright Olark 2014
 * @license
-* @version    Release: $Revision: 1.2 $
+* @version   Release: $Revision: 1.2 $
 */
 
 if (!defined('_PS_VERSION_'))
