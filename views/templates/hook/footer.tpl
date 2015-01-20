@@ -52,5 +52,5 @@ olark('api.visitor.updateEmailAddress', {emailAddress: email});
 {/literal}
 {/if}
 {literal}
-/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/{$siteId|escape:'htmllall'}/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/{$siteId|escape:'htmlall'}/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
 <!-- End Olark -->
