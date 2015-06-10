@@ -25,9 +25,9 @@
 </script>
 <img src="{$tracking|escape:'htmlall':'UTF-8'}" alt="tracking" style="display: none" />
 <div class="olark-wrap">
-	<p class="olark-intro"><a href="https://www.olark.com/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-logo" target="_blank"><img src="{$module_dir|escape:'htmlall'}img/olark_logo.png" alt="Olark" border="0" /></a><span>{l s='Chat with your Customers' mod='olark'}</span><br />
+	<p class="olark-intro"><a href="https://www.olark.com/special/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-logo" target="_blank"><img src="{$module_dir|escape:'htmlall'}img/olark_logo.png" alt="Olark" border="0" /></a><span>{l s='Chat with your Customers' mod='olark'}</span><br />
 	{l s='Create trust, loyalty &amp; happiness' mod='olark'}<br />
-	<a href="https://www.olark.com/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-link" target="_blank">{l s='Get Started Now' mod='olark'}</a></p>
+	<a href="https://www.olark.com/special/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-link" target="_blank">{l s='Get Started Now' mod='olark'}</a></p>
 	<div class="olark-content">
 		<h3>{l s='Get to know your shoppers, create relationships with customers and increase sales.' mod='olark'}</h3>
 		<div class="olark-video">
@@ -42,9 +42,9 @@
 			<li><img src="{$module_dir|escape:'htmlall'}img/olark-crm.png" alt="" /> {l s='CRM &amp; Helpdesk Integration' mod='olark'}</li>
 			<li class="alt"><img src="{$module_dir|escape:'htmlall'}img/olark-code.png" alt="" /> {l s='Powerful API' mod='olark'}</li>
 		</ul>
-		<p>{l s='Talk to your customers today!' mod='olark'} <a href="https://www.olark.com/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-link" target="_blank">{l s='Create an Account' mod='olark'}</a></p>
+		<p>{l s='Talk to your customers today!' mod='olark'} <a href="https://www.olark.com/special/prestashop?rid=prestashop&utm_source=prestashop&utm_medium=partner&utm_campaign=cart" class="olark-link" target="_blank">{l s='Create an Account' mod='olark'}</a></p>
 	</div>
-	
+
 	<form action="{$form|escape:'htmlall':'UTF-8'}" method="post">
 		<fieldset>
 			<legend><img src="{$module_dir|escape:'htmlall'}img/icon-config.gif" alt="" />{l s='Configuration' mod='olark'}</legend>
