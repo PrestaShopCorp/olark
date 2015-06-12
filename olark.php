@@ -19,7 +19,7 @@ class Olark extends Module
 	{
 		$this->name = 'olark';
 		$this->tab = 'front_office_features';
-		$this->version = '1.1.2';
+		$this->version = '1.1.3';
 		$this->author = 'Olark';
 		$this->module_key = 'c2e5478bdc888252ba4beeb37c700a9d';
 		parent::__construct();
