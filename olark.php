@@ -8,7 +8,7 @@
 * @version   Release: $Revision: 1.2 $
 */
 
-if (!defined('_PS_VERSION_'))
+if (!defined('_TB_VERSION_'))
 	exit;
 
 class Olark extends Module
@@ -19,19 +19,14 @@ class Olark extends Module
 	{
 		$this->name = 'olark';
 		$this->tab = 'front_office_features';
-		$this->version = '1.1.3';
+		$this->version = '1.0.0';
 		$this->author = 'Olark';
-		$this->module_key = 'c2e5478bdc888252ba4beeb37c700a9d';
 		parent::__construct();
 
 		$this->displayName = $this->l('Olark');
 		$this->description = $this->l('Chat with Customers directly through your IM client: GTalk, iChat...');
 
 		$this->confirmUninstall = $this->l('Are you sure you want to delete your details?');
-
-		/* Backward compatibility */
-		if (_PS_VERSION_ < 1.5)
-			require(_PS_MODULE_DIR_.'olark/backward_compatibility/backward.php');
 	}
 
 	/* Init the private variable configurationKey with the list of all the smarty, post variables needed */
@@ -79,11 +74,11 @@ class Olark extends Module
 	public function getContent()
 	{
 		$html = '';
-			if (version_compare(_PS_VERSION_, '1.5', '>'))
+			if (version_compare(_TB_VERSION_, '1.5', '>'))
 				$this->context->controller->addJQueryPlugin('fancybox');
 			else
-				$html .= '<script type="text/javascript" src="'.__PS_BASE_URI__.'js/jquery/jquery.fancybox-1.3.4.js"></script>
-			  	<link type="text/css" rel="stylesheet" href="'.__PS_BASE_URI__.'css/jquery.fancybox-1.3.4.css" />';
+				$html .= '<script type="text/javascript" src="'.__TB_BASE_URI__.'js/jquery/jquery.fancybox-1.3.4.js"></script>
+			  	<link type="text/css" rel="stylesheet" href="'.__TB_BASE_URI__.'css/jquery.fancybox-1.3.4.css" />';
 		$this->iniConfigurationKeys();
 		if (Tools::isSubmit('submitOlark'))
 		{
@@ -97,11 +92,12 @@ class Olark extends Module
 			$smarty_variables[$keys['smarty']] = Configuration::get($keys['key']);
 		$this->context->smarty->assign($smarty_variables);
 
+		// TODO: <> - Provide or remove the following assets.
 		$this->context->smarty->assign(array(
 				'logo' => '../modules/olark/img/olark_logo.png',
 				'form' => './index.php?tab=AdminModules&configure=olark&token='
 					.Tools::getAdminTokenLite('AdminModules').'&tab_module='.$this->tab.'&module_name=olark',
-				'tracking' => 'http://www.prestashop.com/modules/olark.png?url_site='
+				'tracking' => 'http://www.thirtybees.com/modules/olark.png?url_site='
 					.Tools::safeOutput($_SERVER['SERVER_NAME']).'&amp;id_lang='.(int)$this->context->cookie->id_lang,
 			));
 
